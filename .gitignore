@@ -64,3 +64,4 @@ build
 Thumbs.db
 /jwt-auth/.mvn/
 /movie-api/.mvn/
+/.mvn/
