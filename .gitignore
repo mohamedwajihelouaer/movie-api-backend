@@ -1,0 +1,64 @@
+### Java ###
+*.class
+*.jar
+*.war
+*.ear
+*.hprof
+.classpath
+.project
+.settings
+target
+bin
+
+### Maven ###
+target/
+!*/target/classes
+.mvn/wrapper/maven-wrapper.jar
+.mvn/wrapper/maven-wrapper.properties
+.mvn/wrapper/MavenWrapperDownloader.java
+.mvn/wrapper/MavenWrapperServlet.java
+.mvn/wrapper/MavenWrapperURLConnection.java
+.mvn/wrapper/MavenWrapperURLConnection.class
+.mvn/wrapper/MavenWrapperDownloader.class
+.mvn/wrapper/MavenWrapperServlet.class
+
+### IntelliJ IDEA ###
+.idea
+*.iml
+out/
+
+### Eclipse ###
+.metadata
+.plugins
+org.eclipse.core.resources/.markers
+org.eclipse.jdt.core.prefs
+org.eclipse.m2e.core.prefs
+org.eclipse.wst.common.component
+org.eclipse.wst.xml.core.prefs
+org.eclipse.jdt.ui.prefs
+org.eclipse.pde.core.prefs
+.settings/
+
+### NetBeans ###
+nbproject/private/
+build/
+dist/
+nbdist/
+nbactions.xml
+nb-configuration.xml
+
+### Quarkus Specific ###
+.quarkus/
+
+### Logs and Temporary Files ###
+*.log
+*.tmp
+*.swp
+*.backup
+*.cache
+.gradle
+build
+
+# OS Specific Files (Optional but Recommended)
+.DS_Store
+Thumbs.db
