@@ -1,5 +1,7 @@
 package com.jyx.movies;
 
+import jakarta.annotation.security.PermitAll;
+import jakarta.annotation.security.RolesAllowed;
 import jakarta.enterprise.context.ApplicationScoped;
 import jakarta.ws.rs.*;
 import jakarta.ws.rs.core.MediaType;
@@ -21,12 +23,15 @@ public class MovieResource {
     );
 
     @GET
+    @PermitAll
     public Response getMovies() {
         return  Response.ok().entity(movies).build();
     }
 
     @POST
     @Produces(MediaType.APPLICATION_JSON)
+    @Consumes(MediaType.APPLICATION_JSON)
+    @RolesAllowed({RoleConstants.USER, RoleConstants.ADMIN})
     public Response addMovie(Movie movie) {
         movies.add(movie);
         return Response.status(Response.Status.CREATED).entity(movie).build();
@@ -34,6 +39,7 @@ public class MovieResource {
 
     @DELETE
     @Path("/movies/{id}")
+    @RolesAllowed({RoleConstants.ADMIN})
     public Response deleteMovie(@PathParam("id") Long id) {
         movies.stream()
                 .filter(movie -> movie.getId().equals(id))

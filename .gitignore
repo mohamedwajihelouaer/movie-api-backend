@@ -66,3 +66,4 @@ jwt-auth/.mvn/
 movie-api/.mvn/
 *.mvn
 /.mvn/
+/jwt/
