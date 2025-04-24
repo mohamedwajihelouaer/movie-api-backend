@@ -62,6 +62,7 @@ build
 # OS Specific Files (Optional but Recommended)
 .DS_Store
 Thumbs.db
-/jwt-auth/.mvn/
-/movie-api/.mvn/
+jwt-auth/.mvn/
+movie-api/.mvn/
+*.mvn
 /.mvn/
